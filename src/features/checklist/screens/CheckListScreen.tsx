@@ -4,7 +4,7 @@ import { Text, View } from "react-native";
 export const CheckListScreen: FC = () => {
     return <View>
         <Text>
-            Checklist screen!
+            This is the checklist screen!
         </Text>
     </View>
 }
