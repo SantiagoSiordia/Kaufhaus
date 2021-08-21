@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import React, { FC } from 'react';
 import 'react-native-gesture-handler';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { MainStackNavigator } from "./src/features/navigation/MainStackNavigator";
