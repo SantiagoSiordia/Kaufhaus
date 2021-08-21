@@ -1,0 +1,26 @@
+{
+  "extends": [
+    "@react-native-community",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "plugin:typescript-sort-keys/recommended"
+  ],
+  "parserOptions": {
+    "project": ["./tsconfig.json"] // Specify it only for TypeScript files
+  },
+  "rules": {
+    /* Disallow unnecessary curly braces in JSX props and/or children */
+    "react/jsx-curly-brace-presence": ["error", "never"],
+    /* Boolean values should not have explicitly declared True */
+    "react/jsx-boolean-value": "error",
+    "react/no-children-prop": "error",
+    "react/jsx-sort-props": "error",
+    "jest/no-large-snapshots": "warn",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/unbound-method": "warn",
+    "@typescript-eslint/no-unsafe-assignment": "warn",
+    "max-params": ["error", 3],
+    /* Order in alphabetical order, with required keys first*/
+    "typescript-sort-keys/interface": ["error", "asc", { "requiredFirst": true }]
+  }
+}
