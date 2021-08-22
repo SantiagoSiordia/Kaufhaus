@@ -1,10 +1,10 @@
-import React, { FC } from "react";
-import { Text, View } from "react-native";
+import React, { FC } from 'react';
+import { KhText, KhView } from '~/src/components';
 
 export const CheckListScreen: FC = () => {
-    return <View>
-        <Text>
-            This is the checklist screen!
-        </Text>
-    </View>
-}
+  return (
+    <KhView backgroundColor={'white'} flex={1}>
+      <KhText variant={'h2'}>This is the checklist screen!</KhText>
+    </KhView>
+  );
+};
