@@ -1,10 +1,5 @@
-import { FONTS } from '../FONTS';
+import { FONTS } from '../fonts';
 
-/**
- * Text variants for CP Theme
- *
- * All text within the application must correspond to one of these types.
- */
 export const textVariants = {
   h2: {
     fontFamily: FONTS.medium,
