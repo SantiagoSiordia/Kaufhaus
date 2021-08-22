@@ -18,6 +18,7 @@
     "@react-navigation/native-stack": "^6.0.5",
     "@react-navigation/stack": "^6.0.6",
     "@shopify/restyle": "^1.4.0",
+    "expo-font": "^9.2.1",
     "expo-linear-gradient": "^9.2.0",
     "react": "17.0.1",
     "react-native": "0.64.1",
