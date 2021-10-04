@@ -14,7 +14,7 @@ export const KhContainer: FC<KhContainerProps> = ({
 }) => (
     <KhView margin="m" {...containerStyle}>
         {React.Children.map(children, (child) =>
-            <KhView margin="s" {...itemStyle}>
+            <KhView marginBottom="s" {...itemStyle}>
                 {child}
             </KhView>
         )}
