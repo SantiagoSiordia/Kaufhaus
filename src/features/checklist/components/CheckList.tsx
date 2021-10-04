@@ -1,46 +1,78 @@
-import { MaterialIcons } from '@expo/vector-icons';
+import { MaterialIcons } from "@expo/vector-icons";
 import React, { FC } from "react";
+import { SwipeRow } from 'react-native-swipe-list-view';
+import { useDispatch, useSelector } from "react-redux";
 import { KhText, KhView } from "~/src/components";
 import { numberAsCurrency } from "~/src/utils";
+import { RootState } from "../../redux";
+import { deleteItemFromChecklist, increaseItemQuantity } from "../../redux/reducers";
 
 export interface CheckListItemType {
     id: string;
     item: string;
     price: number;
+    quantity: number;
 }
 
-export interface CheckListProps {
-    list: Array<CheckListItemType>
-    removeItemFromList: Function;
-}
+export const CheckList: FC = () => {
+    const checklist = useSelector((state: RootState) => state.checklist.list)
+    const totalPrice = useSelector((state: RootState) => state.checklist.totalPrice)
+    const dispatch = useDispatch();
 
-export const CheckList: FC<CheckListProps> = ({
-    list,
-    removeItemFromList,
-}) => {
-    const total = list.reduce((acc, cur) => acc += cur.price, 0)
+    const handleOnDeleteItemFromChecklist = (itemId: string) => {
+        dispatch(deleteItemFromChecklist(itemId));
+    }
+    
+    const handleOnIncreaseQuantity = (itemId: string) => {
+        dispatch(increaseItemQuantity(itemId))
+    }
+
     return (
         <KhView>
-            <KhText variant={"body-bold"}>These are the added items!</KhText>
-            {list.map(listItem => {
+            <KhText variant="body-bold">These are the added items!</KhText>
+            {checklist.map(listItem => {
                 return (
-                    <KhView key={listItem.id} flexDirection="row" justifyContent="space-between" alignItems="center">
-                        <KhText variant="body-regular">
-                            {listItem.item}
-                        </KhText>
-                        <KhText variant="price-regular">
-                            {numberAsCurrency(listItem.price)}
-                        </KhText>
-                        <MaterialIcons onPress={() => removeItemFromList(listItem.id)} name="clear" size={32} color="red" />
+                    <KhView key={listItem.id}>
+                        <SwipeRow
+                            onLeftAction={() => handleOnDeleteItemFromChecklist(listItem.id)}
+                            leftActivationValue={100}
+                            onRightAction={() => handleOnIncreaseQuantity(listItem.id)}
+                            rightActivationValue={100}
+                            stopLeftSwipe={50}
+                            friction={4}
+                            preview
+                        >
+                            <KhView flexDirection="row" justifyContent="space-between" alignItems="center" width="100%" height="100%">
+                                <KhView backgroundColor="danger" height="100%" justifyContent="center" width="50%" paddingHorizontal="m">
+                                    <MaterialIcons name="clear" size={24} color="white" />
+                                </KhView>
+                                <KhView backgroundColor="success" height="100%" justifyContent="center" alignItems="flex-end" width="50%" paddingHorizontal="m">
+                                    <MaterialIcons name="add" size={24} color="white" />
+                                </KhView>
+                            </KhView>
+                            <KhView backgroundColor="white" flexDirection="row" justifyContent="space-between" alignItems="center" paddingHorizontal="m">
+                                <KhView justifyContent="center" width="20%">
+                                    <KhText variant="body-bold">
+                                        {listItem.item}
+                                    </KhText>
+                                    <KhText variant="btn">
+                                        {listItem.quantity}
+                                    </KhText>
+                                </KhView>
+                                <KhText variant="price-regular">
+                                    {numberAsCurrency(listItem.price)}
+                                </KhText>
+                            </KhView>
+                        </SwipeRow>
                     </KhView>
                 )
             })}
-            <KhView flexDirection="row" justifyContent="space-between">
-                <KhText variant="body-regular">
+            <KhView flexDirection="row" justifyContent="space-between" padding="m">
+                <KhText variant="body-bold">
                     Total
                 </KhText> 
                 <KhText variant="price-regular">
-                    {numberAsCurrency(total)}
+                    {numberAsCurrency(totalPrice)}
                 </KhText>
             </KhView>
         </KhView>
