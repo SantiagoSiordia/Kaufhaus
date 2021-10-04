@@ -1,21 +1,22 @@
 import React, { FC } from "react";
+import { ViewProps } from "react-native";
 import { KhView } from "..";
 
 export interface KhContainerProps {
-    
+    itemStyle?: ViewProps;
+    containerStyle?: ViewProps;
 }
 
-export const KhContainer: FC = ({
-    children
+export const KhContainer: FC<KhContainerProps> = ({
+    children,
+    itemStyle,
+    containerStyle
 }) => (
-    <KhView>
+    <KhView margin="m" {...containerStyle}>
         {React.Children.map(children, (child) =>
-            // @ts-expect-error child is really a React.ReactNode
-            React.cloneElement(child, {
-                style: {
-                    margin: 8
-                },
-            }),
+            <KhView margin="s" {...itemStyle}>
+                {child}
+            </KhView>
         )}
     </KhView>
 );
