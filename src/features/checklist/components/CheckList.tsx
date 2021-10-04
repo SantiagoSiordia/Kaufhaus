@@ -15,6 +15,7 @@ export interface CheckListProps {
 export const CheckList: FC<CheckListProps> = ({
     list
 }) => {
+    const total = list.reduce((acc, cur) => acc += cur.price, 0)
     return (
         <KhView>
             <KhText variant={"body-bold"}>These are the added items!</KhText>
@@ -30,6 +31,14 @@ export const CheckList: FC<CheckListProps> = ({
                     </KhView>
                 )
             })}
+            <KhView flexDirection="row" justifyContent="space-between">
+                <KhText variant="body-regular">
+                    Total
+                </KhText> 
+                <KhText variant="price-regular">
+                    {numberAsCurrency(total)}
+                </KhText>
+            </KhView>
         </KhView>
     )
 }
