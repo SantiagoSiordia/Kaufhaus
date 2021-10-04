@@ -1,3 +1,4 @@
+import { NativeBaseProvider } from 'native-base';
 import React, { FC } from 'react';
 import 'react-native-gesture-handler';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -6,11 +7,13 @@ import { KhThemeProvider } from './src/theme';
 
 const App: FC = () => {
   return (
-    <KhThemeProvider>
-      <SafeAreaView style={{ flex: 1 }}>
-        <MainStackNavigator />
-      </SafeAreaView>
-    </KhThemeProvider>
+    <NativeBaseProvider>
+      <KhThemeProvider>
+        <SafeAreaView style={{ flex: 1 }}>
+          <MainStackNavigator />
+        </SafeAreaView>
+      </KhThemeProvider>
+    </NativeBaseProvider>
   );
 };
 
