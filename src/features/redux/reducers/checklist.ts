@@ -14,13 +14,10 @@ export const checklistSlice = createSlice({
   initialState,
   reducers: {
     addItemToChecklist: (state, action: PayloadAction<CheckListItemType>) => {
-      state = {
-          ...state,
-          list: [
-              ...state.list,
-              action.payload
-          ]
-      }
+      state.list = [
+        ...state.list,
+        action.payload
+      ]
     },
   },
 })
