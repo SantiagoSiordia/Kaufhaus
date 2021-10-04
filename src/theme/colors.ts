@@ -6,6 +6,8 @@ export const Colors = {
   black: '#000000',
   violet: '#261542',
   purple: '#533289',
+  danger: '#E0044E',
+  success: '#176B12',
 
   overlayPrimary: 'rgba(44, 14, 55, 0.3)',
   overlaySecondary: 'rgba(144, 4, 159, 0.3)',
@@ -14,4 +16,6 @@ export const Colors = {
   overlayBlack: 'rgba(0, 0, 0, 0.3)',
   overlayViolet: 'rgba(38, 21, 66, 0.3)',
   overLayPurple: 'rgba(83, 50, 137, 0.3)',
+  overLayDanger: 'rgba(224, 4, 78, 0.3)',
+  overLaySuccess: 'rgba(23, 107, 18, 0.3)',
 } as const;
