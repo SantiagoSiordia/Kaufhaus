@@ -1,23 +1,9 @@
-import React from 'react';
 import {
-  ColorProps,
-  OpacityProps,
-  TypographyProps,
-  TextShadowProps,
-  SpacingProps,
-  SpacingShorthandProps,
-  VariantProps,
-  color,
-  opacity,
-  typography,
-  textShadow,
-  spacing,
-  spacingShorthand,
-  createVariant,
-  useRestyle,
+  color, ColorProps, createVariant, opacity, OpacityProps, spacing, SpacingProps, spacingShorthand, SpacingShorthandProps, textShadow, TextShadowProps, typography, TypographyProps, useRestyle, VariantProps
 } from '@shopify/restyle';
-import type { Theme } from 'src/theme';
+import React from 'react';
 import { Text, TextProps } from 'react-native';
+import type { Theme } from 'src/theme';
 
 const restyleFunctions = [
   color,
@@ -37,7 +23,7 @@ export type KhTextProps = React.PropsWithChildren<
     TextShadowProps<Theme> &
     SpacingProps<Theme> &
     SpacingShorthandProps<Theme> &
-    Required<VariantProps<Theme, 'textVariants'>>
+    VariantProps<Theme, 'textVariants'>
 >;
 
 export const KhText: React.FC<
@@ -51,4 +37,5 @@ export const KhText: React.FC<
 KhText.defaultProps = {
   textShadowColor: 'overlayBlack',
   color: 'black',
+  variant: 'body-regular'
 };
