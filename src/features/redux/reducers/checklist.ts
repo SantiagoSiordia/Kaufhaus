@@ -26,11 +26,18 @@ export const checklistSlice = createSlice({
       const listItemToDelete = state.list.find(item => item.id === action.payload);
       state.list = state.list.filter(item => item.id !== action.payload);
       state.totalPrice -= listItemToDelete?.price || 0;
+    },
+    increaseItemQuantity: (state, action: PayloadAction<string>) => {
+      const listItemToIncreaseQuantity = state.list.find(item => item.id === action.payload);
+      const indexOfListItemToIncreaseQuantity = state.list.findIndex(item => item.id === action.payload);
+      state.totalPrice += listItemToIncreaseQuantity?.price || 0;
+      const newListState = state.list;
+      newListState[indexOfListItemToIncreaseQuantity].quantity++;
+      state.list = [ ...newListState ];
     }
   },
 })
 
-// Action creators are generated for each case reducer function
-export const { addItemToChecklist, deleteItemFromChecklist } = checklistSlice.actions
+export const { addItemToChecklist, deleteItemFromChecklist, increaseItemQuantity } = checklistSlice.actions
 
 export const checklistReducer = checklistSlice.reducer
