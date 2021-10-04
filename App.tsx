@@ -1,3 +1,5 @@
+import 'intl';
+import 'intl/locale-data/jsonp/en';
 import { NativeBaseProvider } from 'native-base';
 import React, { FC } from 'react';
 import 'react-native-gesture-handler';
