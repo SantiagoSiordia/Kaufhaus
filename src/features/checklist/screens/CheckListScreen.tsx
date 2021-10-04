@@ -14,6 +14,7 @@ export const CheckListScreen: FC = () => {
   const addItemToList = () => {
     setList(prevList => [...prevList, { id: createToken(15), item, price: +itemPrice }])
     setItem('');
+    setItemPrice('');
   }
 
   return (
