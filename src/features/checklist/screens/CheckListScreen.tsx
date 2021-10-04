@@ -17,6 +17,8 @@ export const CheckListScreen: FC = () => {
     setItemPrice('');
   }
 
+  const removeItemFromList = (id: string) => setList(prevList => prevList.filter(item => item.id !== id));
+
   return (
     <KhView backgroundColor={'white'} flex={1}>
       <KhContainer>
@@ -35,7 +37,7 @@ export const CheckListScreen: FC = () => {
         <KhButton onPress={addItemToList} text="Agregar elemento!" />
       </KhContainer>
       <KhContainer>
-        <CheckList list={list} />
+        <CheckList list={list} removeItemFromList={removeItemFromList} />
       </KhContainer>
     </KhView>
   );
