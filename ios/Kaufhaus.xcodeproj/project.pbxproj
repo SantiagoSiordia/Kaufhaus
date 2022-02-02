@@ -13,6 +13,7 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2F161C4826C994BA00DFBF4F /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F161C4726C994BA00DFBF4F /* File.swift */; };
+		2FF8468627AB4868001B12DD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2FF8468527AB4868001B12DD /* GoogleService-Info.plist */; };
 		450CC437B46242C6A6F5E11C /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 37A216636BF74AA98C2D4663 /* Montserrat-Bold.ttf */; };
 		77C526518E994E8CB168EDE7 /* Montserrat-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 723BA6A65F1E46158C3485A0 /* Montserrat-Light.ttf */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
@@ -42,17 +43,18 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Kaufhaus/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Kaufhaus/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Kaufhaus/main.m; sourceTree = "<group>"; };
-		2D4D63DF2346473ABFA945B1 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Montserrat-Medium.ttf"; path = "../src/resources/fonts/Montserrat-Medium.ttf"; sourceTree = "<group>"; };
+		2D4D63DF2346473ABFA945B1 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Montserrat-Medium.ttf"; path = "../src/resources/fonts/Montserrat-Medium.ttf"; sourceTree = "<group>"; };
 		2F161C4626C994BA00DFBF4F /* Kaufhaus-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Kaufhaus-Bridging-Header.h"; sourceTree = "<group>"; };
 		2F161C4726C994BA00DFBF4F /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		2FF8468527AB4868001B12DD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		331DA7C6C787F50CBAF6E874 /* Pods-Kaufhaus-KaufhausTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kaufhaus-KaufhausTests.debug.xcconfig"; path = "Target Support Files/Pods-Kaufhaus-KaufhausTests/Pods-Kaufhaus-KaufhausTests.debug.xcconfig"; sourceTree = "<group>"; };
-		37A216636BF74AA98C2D4663 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Montserrat-Bold.ttf"; path = "../src/resources/fonts/Montserrat-Bold.ttf"; sourceTree = "<group>"; };
-		723BA6A65F1E46158C3485A0 /* Montserrat-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Montserrat-Light.ttf"; path = "../src/resources/fonts/Montserrat-Light.ttf"; sourceTree = "<group>"; };
+		37A216636BF74AA98C2D4663 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Montserrat-Bold.ttf"; path = "../src/resources/fonts/Montserrat-Bold.ttf"; sourceTree = "<group>"; };
+		723BA6A65F1E46158C3485A0 /* Montserrat-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Montserrat-Light.ttf"; path = "../src/resources/fonts/Montserrat-Light.ttf"; sourceTree = "<group>"; };
 		7DB4850D99C7F071F26AA976 /* libPods-Kaufhaus-KaufhausTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Kaufhaus-KaufhausTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Kaufhaus/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		85A6F64B97BF47718FC1D816 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Montserrat-Regular.ttf"; path = "../src/resources/fonts/Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		85A6F64B97BF47718FC1D816 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Montserrat-Regular.ttf"; path = "../src/resources/fonts/Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		B96C9328AF0230ADD4170A63 /* Pods-Kaufhaus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kaufhaus.debug.xcconfig"; path = "Target Support Files/Pods-Kaufhaus/Pods-Kaufhaus.debug.xcconfig"; sourceTree = "<group>"; };
-		DFC3810E628448F8B6BA4BFB /* Montserrat-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Montserrat-Thin.ttf"; path = "../src/resources/fonts/Montserrat-Thin.ttf"; sourceTree = "<group>"; };
+		DFC3810E628448F8B6BA4BFB /* Montserrat-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Montserrat-Thin.ttf"; path = "../src/resources/fonts/Montserrat-Thin.ttf"; sourceTree = "<group>"; };
 		E773E3E44FE36755C2F3FC52 /* Pods-Kaufhaus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kaufhaus.release.xcconfig"; path = "Target Support Files/Pods-Kaufhaus/Pods-Kaufhaus.release.xcconfig"; sourceTree = "<group>"; };
 		E8C1A9903316DF6B203A7014 /* Pods-Kaufhaus-KaufhausTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kaufhaus-KaufhausTests.release.xcconfig"; path = "Target Support Files/Pods-Kaufhaus-KaufhausTests/Pods-Kaufhaus-KaufhausTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -99,6 +101,7 @@
 		13B07FAE1A68108700A75B9A /* Kaufhaus */ = {
 			isa = PBXGroup;
 			children = (
+				2FF8468527AB4868001B12DD /* GoogleService-Info.plist */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -129,7 +132,6 @@
 				DFC3810E628448F8B6BA4BFB /* Montserrat-Thin.ttf */,
 			);
 			name = Resources;
-			path = "";
 			sourceTree = "<group>";
 		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
@@ -272,6 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
+				2FF8468627AB4868001B12DD /* GoogleService-Info.plist in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				450CC437B46242C6A6F5E11C /* Montserrat-Bold.ttf in Resources */,
 				77C526518E994E8CB168EDE7 /* Montserrat-Light.ttf in Resources */,

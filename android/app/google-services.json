@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "720659910297",
+    "project_id": "kaufhaus-6017e",
+    "storage_bucket": "kaufhaus-6017e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:720659910297:android:d77a7dc3d2a470e9733208",
+        "android_client_info": {
+          "package_name": "com.kaufhaus"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "720659910297-160bp4ths3827qpc2k0nuht1ohdgibi0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kaufhaus",
+            "certificate_hash": "e6875d8254c6cbe38010015ad1b48351c8a7cfeb"
+          }
+        },
+        {
+          "client_id": "720659910297-ia52ts33i3c5cm7nf098e6gta3pncq69.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDrLIMZli_PSXJGEve-anwAduTiIxyLhkA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "720659910297-ia52ts33i3c5cm7nf098e6gta3pncq69.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

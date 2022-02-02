@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>720659910297-vl5fu7go0408noqedajasmt80kqjp6s1.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.720659910297-vl5fu7go0408noqedajasmt80kqjp6s1</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>720659910297-160bp4ths3827qpc2k0nuht1ohdgibi0.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDD3eZZWIFFgjBasP7U7iIIvlnJvdLukzE</string>
+	<key>GCM_SENDER_ID</key>
+	<string>720659910297</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>org.reactjs.native.example.Kaufhaus</string>
+	<key>PROJECT_ID</key>
+	<string>kaufhaus-6017e</string>
+	<key>STORAGE_BUCKET</key>
+	<string>kaufhaus-6017e.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:720659910297:ios:a76b093870e81933733208</string>
+</dict>
+</plist>
