@@ -1,12 +1,11 @@
+import { KhContainer, KhText, KhView } from "@components";
 import { MaterialIcons } from "@expo/vector-icons";
+import { deleteItemFromChecklist, increaseItemQuantity, RootState } from "@redux";
+import { useAppTranslation } from "@translations";
+import { numberAsCurrency } from "@utils";
 import React, { FC } from "react";
 import { SwipeRow } from 'react-native-swipe-list-view';
 import { useDispatch, useSelector } from "react-redux";
-import { KhContainer, KhText, KhView } from "~/src/components";
-import { numberAsCurrency } from "~/src/utils";
-import { RootState } from "../../redux";
-import { deleteItemFromChecklist, increaseItemQuantity } from "../../redux/reducers";
-import { useAppTranslation } from "../../translations";
 
 export interface CheckListItemType {
     id: string;

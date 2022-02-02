@@ -1,5 +1,5 @@
+import { CheckListItemType } from '@features';
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { CheckListItemType } from '../../checklist/components';
 
 interface ChecklistState {
     list: Array<CheckListItemType>

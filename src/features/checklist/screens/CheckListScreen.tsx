@@ -1,11 +1,10 @@
+import { KhButton, KhContainer, KhText, KhView } from "@components";
+import { addItemToChecklist } from "@redux";
+import { useAppTranslation } from "@translations";
 import { Input } from "native-base";
 import React, { FC, useState } from 'react';
 import { useDispatch } from "react-redux";
-import { KhButton, KhText, KhView } from '~/src/components';
-import { KhContainer } from "~/src/components/KhContainer/KhContainer";
 import { createToken } from "~/src/utils";
-import { addItemToChecklist } from "../../redux/reducers";
-import { useAppTranslation } from "../../translations";
 import { CheckList, CheckListItemType } from "../components";
 
 export const CheckListScreen: FC = () => {

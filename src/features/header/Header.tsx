@@ -1,8 +1,8 @@
 import { NativeStackHeaderProps } from '@react-navigation/native-stack/lib/typescript/src/types';
+import { Colors } from '@theme';
+import { LinearGradient, LinearGradientProps } from 'expo-linear-gradient';
 import React, { FC } from 'react';
 import { Image, StyleSheet, View } from 'react-native';
-import { Colors } from '../../theme/colors';
-import { LinearGradient, LinearGradientProps } from 'expo-linear-gradient';
 
 type PickedGradient = Pick<
   LinearGradientProps,

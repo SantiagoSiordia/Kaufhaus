@@ -6,7 +6,6 @@ interface CustomHeaderOptions extends StackNavigationOptions {
   showClear?: boolean;
 }
 
-
 interface MainStackParamList {
     [SCREENS.CHECKLIST]: undefined,
 }

@@ -1,7 +1,7 @@
-import { Colors } from './colors';
 import { createTheme, ThemeProvider, useTheme } from '@shopify/restyle';
 import React from 'react';
-import { containerVariants, textVariants } from '~/src/theme/variants';
+import { Colors } from './colors';
+import { containerVariants, textVariants } from './variants';
 
 export const theme = createTheme({
   colors: {
@@ -32,3 +32,5 @@ export const useKhTheme = () => useTheme<Theme>();
 export const KhThemeProvider: React.FC = ({ children }) => (
   <ThemeProvider theme={theme}>{children}</ThemeProvider>
 );
+
+export { Colors };
