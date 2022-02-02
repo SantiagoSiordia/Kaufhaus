@@ -1,4 +1,4 @@
-import { KhContainer, KhInput, KhText, KhView } from "@components";
+import { KhButton, KhContainer, KhInput, KhText, KhView } from "@components";
 import { addItemToChecklist } from "@redux";
 import { useAppTranslation } from "@translations";
 import { useFormik } from 'formik';
@@ -25,27 +25,24 @@ export const CheckListScreen: FC = () => {
 
   const dispatch = useDispatch();
 
+  const handleOnAddItemToChecklist = () => {
+    dispatch(addItemToChecklist({
+      id: createToken(15),
+      item: itemForm.values.product,
+      price: +itemForm.values.price,
+      quantity: 1,
+    }));
+    itemForm.handleReset("")
+  }
+
   const itemForm = useFormik({
-    onSubmit: () => {
-      console.log("Hello")
-    },
+    onSubmit: handleOnAddItemToChecklist,
     initialValues: {
       product: "",
       price: ""
     },
     validationSchema
   });
-
-  const handleOnAddItemToChecklist = () => {
-    dispatch(addItemToChecklist({
-      id: createToken(15),
-      item,
-      price: +itemPrice,
-      quantity: 1,
-    }));
-    setItem("");
-    setItemPrice("");
-  }
 
   const { t } = useAppTranslation();
 
@@ -72,6 +69,7 @@ export const CheckListScreen: FC = () => {
           error={itemForm.touched.price && !!itemForm.errors.price}
           errorMessage={itemForm.errors.price}
         />
+        <KhButton text={t("add element")} marginTop={4} onPress={() => itemForm.handleSubmit()} />
       </KhContainer>
       <CheckList />
     </KhView>
