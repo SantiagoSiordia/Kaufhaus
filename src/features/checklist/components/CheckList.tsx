@@ -52,7 +52,7 @@ export const CheckList: FC = () => {
                                     <MaterialIcons name="add" size={24} color="white" />
                                 </KhView>
                             </KhView>
-                            <KhView backgroundColor="white" flexDirection="row" justifyContent="space-between" alignItems="center" paddingHorizontal="m">
+                            <KhView backgroundColor="white" flexDirection="row" justifyContent="space-between" alignItems="center">
                                 <KhView justifyContent="center" width="20%">
                                     <KhText variant="body-bold">
                                         {listItem.item}
