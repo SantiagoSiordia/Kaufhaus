@@ -2,10 +2,11 @@ import { MaterialIcons } from "@expo/vector-icons";
 import React, { FC } from "react";
 import { SwipeRow } from 'react-native-swipe-list-view';
 import { useDispatch, useSelector } from "react-redux";
-import { KhText, KhView } from "~/src/components";
+import { KhContainer, KhText, KhView } from "~/src/components";
 import { numberAsCurrency } from "~/src/utils";
 import { RootState } from "../../redux";
 import { deleteItemFromChecklist, increaseItemQuantity } from "../../redux/reducers";
+import { useAppTranslation } from "../../translations";
 
 export interface CheckListItemType {
     id: string;
@@ -27,9 +28,11 @@ export const CheckList: FC = () => {
         dispatch(increaseItemQuantity(itemId))
     }
 
+    const { t } = useAppTranslation();
+
     return (
-        <KhView>
-            <KhText variant="body-bold">These are the added items!</KhText>
+        <KhContainer>
+            <KhText variant="body-bold">{t("added items")}</KhText>
             {checklist.map(listItem => {
                 return (
                     <KhView key={listItem.id}>
@@ -67,14 +70,14 @@ export const CheckList: FC = () => {
                     </KhView>
                 )
             })}
-            <KhView flexDirection="row" justifyContent="space-between" padding="m">
+            <KhView flexDirection="row" justifyContent="space-between">
                 <KhText variant="body-bold">
-                    Total
+                    {t("total")}
                 </KhText> 
                 <KhText variant="price-regular">
                     {numberAsCurrency(totalPrice)}
                 </KhText>
             </KhView>
-        </KhView>
+        </KhContainer>
     )
 }

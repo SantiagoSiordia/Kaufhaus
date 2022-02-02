@@ -5,6 +5,7 @@ import { KhButton, KhText, KhView } from '~/src/components';
 import { KhContainer } from "~/src/components/KhContainer/KhContainer";
 import { createToken } from "~/src/utils";
 import { addItemToChecklist } from "../../redux/reducers";
+import { useAppTranslation } from "../../translations";
 import { CheckList, CheckListItemType } from "../components";
 
 export const CheckListScreen: FC = () => {
@@ -26,22 +27,24 @@ export const CheckListScreen: FC = () => {
     setItemPrice("");
   }
 
+  const { t } = useAppTranslation();
+
   return (
     <KhView backgroundColor={'white'} flex={1}>
       <KhContainer>
-        <KhText variant={'body-bold'}>This is the checklist screen!</KhText>
-        <Input onChangeText={setItem} value={item} size="md" placeholder="Producto"/>
+        <KhText variant={'body-bold'}>{t("shopping list")}</KhText>
+        <Input onChangeText={setItem} value={item} size="md" placeholder={t("product")}/>
         <Input
           onChangeText={(price) => {
             if(/^\d*(\.\d{0,2})?$/.test(price)) setItemPrice(price.replace(/[^0-9.]/g, ''));
           }}
           value={itemPrice}
           size="md"
-          placeholder="Precio"
+          placeholder={t("price")}
           keyboardType="number-pad"
           type="number"
         />
-        <KhButton onPress={handleOnAddItemToChecklist} text="Agregar elemento!" />
+        <KhButton onPress={handleOnAddItemToChecklist} text={t("add element")} />
       </KhContainer>
         <CheckList />
     </KhView>

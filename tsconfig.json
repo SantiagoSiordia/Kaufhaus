@@ -11,7 +11,9 @@
     },
     "resolveJsonModule": true,
     "skipLibCheck": true,
-    "strict": true
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "importHelpers": true
   },
   "include": ["src" /*, "types", "mirage", "utils", "__tests__", "storybook"*/],
   "exclude": [
