@@ -1,0 +1,1 @@
+type MaterialIconName = ComponentProps<typeof MaterialIcons>['name'];
