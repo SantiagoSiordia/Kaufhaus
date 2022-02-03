@@ -1,12 +1,12 @@
 import { KhButton, KhContainer, KhInput, KhText, KhView } from "@components";
-import { addItemToChecklist } from "@redux";
+import { addItemToShoppingList } from "@redux";
 import { useAppTranslation } from "@translations";
 import { useFormik } from 'formik';
-import React, { FC, useState } from 'react';
+import React, { FC } from 'react';
 import { useDispatch } from "react-redux";
 import * as Yup from 'yup';
 import { createToken } from "~/src/utils";
-import { CheckList } from "../components";
+import { ShoppingList } from "../components";
 
 Yup.addMethod(Yup.string, 'integer', function () {
   return this.matches(/^\d+$/, 'The field should have digits only')
@@ -18,15 +18,13 @@ const validationSchema = Yup.object({
   price: Yup.string().required().integer(),
 })
 
-export const CheckListScreen: FC = () => {
-
-  const [ item, setItem ] = useState<string>('');
-  const [ itemPrice, setItemPrice ] = useState<string>('');
+export const ShoppingListScreen: FC = () => {
 
   const dispatch = useDispatch();
+  const { t } = useAppTranslation();
 
-  const handleOnAddItemToChecklist = () => {
-    dispatch(addItemToChecklist({
+  const handleOnAddItemToShoppingList = () => {
+    dispatch(addItemToShoppingList({
       id: createToken(15),
       item: itemForm.values.product,
       price: +itemForm.values.price,
@@ -36,15 +34,13 @@ export const CheckListScreen: FC = () => {
   }
 
   const itemForm = useFormik({
-    onSubmit: handleOnAddItemToChecklist,
+    onSubmit: handleOnAddItemToShoppingList,
     initialValues: {
       product: "",
       price: ""
     },
     validationSchema
   });
-
-  const { t } = useAppTranslation();
 
   return (
     <KhView backgroundColor={'white'} flex={1}>
@@ -71,7 +67,7 @@ export const CheckListScreen: FC = () => {
         />
         <KhButton text={t("add element")} marginTop={4} onPress={() => itemForm.handleSubmit()} />
       </KhContainer>
-      <CheckList />
+      <ShoppingList />
     </KhView>
   );
 };

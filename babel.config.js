@@ -25,6 +25,7 @@ module.exports = {
           '@translations': ['./src/features/translations'],
           '@navigation': ['./src/features/navigation'],
           '@utils': ['./src/utils'],
+          '@services': ['./src/features/services']
         },
       },
     ],

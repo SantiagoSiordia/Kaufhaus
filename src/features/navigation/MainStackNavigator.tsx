@@ -1,7 +1,7 @@
-import React from "react";
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { CheckListScreen } from '../checklist/screens/CheckListScreen';
+import React from "react";
+import { ShoppingListScreen } from '../shopping-list/screens/ShoppingListScreen';
 import { Header } from '../header/Header';
 import { SCREENS } from './screens';
 // import { MainStackParamList } from "~/src/features/navigation/navigation";
@@ -15,7 +15,7 @@ export const MainStackNavigator = () => {
         screenOptions={{
           header: props => <Header {...props}/>
         }}>
-        <Stack.Screen name={SCREENS.CHECKLIST} component={CheckListScreen}/>
+        <Stack.Screen name={SCREENS.CHECKLIST} component={ShoppingListScreen}/>
       </Stack.Navigator>
     </NavigationContainer>
   );

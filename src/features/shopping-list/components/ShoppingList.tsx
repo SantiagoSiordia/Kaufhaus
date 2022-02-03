@@ -1,26 +1,22 @@
 import { KhContainer, KhText, KhView } from "@components";
 import { MaterialIcons } from "@expo/vector-icons";
-import { deleteItemFromChecklist, increaseItemQuantity, RootState } from "@redux";
+import { deleteItemFromShoppingList, increaseItemQuantity, RootState } from "@redux";
 import { useAppTranslation } from "@translations";
 import { numberAsCurrency } from "@utils";
 import React, { FC } from "react";
 import { SwipeRow } from 'react-native-swipe-list-view';
 import { useDispatch, useSelector } from "react-redux";
+import { useShoppingLists } from "../../services";
 
-export interface CheckListItemType {
-    id: string;
-    item: string;
-    price: number;
-    quantity: number;
-}
-
-export const CheckList: FC = () => {
+export const ShoppingList: FC = () => {
     const checklist = useSelector((state: RootState) => state.checklist.list)
     const totalPrice = useSelector((state: RootState) => state.checklist.totalPrice)
     const dispatch = useDispatch();
 
-    const handleOnDeleteItemFromChecklist = (itemId: string) => {
-        dispatch(deleteItemFromChecklist(itemId));
+    const { data: items } = useShoppingLists("WCI6j2lX2gxOCeRqeei6");
+
+    const handleOnDeleteItemFromShoppingList = (itemId: string) => {
+        dispatch(deleteItemFromShoppingList(itemId));
     }
     
     const handleOnIncreaseQuantity = (itemId: string) => {
@@ -36,7 +32,7 @@ export const CheckList: FC = () => {
                 return (
                     <KhView key={listItem.id}>
                         <SwipeRow
-                            onLeftAction={() => handleOnDeleteItemFromChecklist(listItem.id)}
+                            onLeftAction={() => handleOnDeleteItemFromShoppingList(listItem.id)}
                             leftActivationValue={100}
                             onRightAction={() => handleOnIncreaseQuantity(listItem.id)}
                             rightActivationValue={100}

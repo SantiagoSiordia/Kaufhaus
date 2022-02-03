@@ -1,12 +1,12 @@
-import { CheckListItemType } from '@features';
+import { ShoppingListItemType } from '@features';
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-interface ChecklistState {
-    list: Array<CheckListItemType>
+interface ShoppingListState {
+    list: Array<ShoppingListItemType>
     totalPrice: number
 };
 
-const initialState: ChecklistState = {
+const initialState: ShoppingListState = {
     list: [],
     totalPrice: 0,
 };
@@ -15,14 +15,14 @@ export const checklistSlice = createSlice({
   name: 'checklist',
   initialState,
   reducers: {
-    addItemToChecklist: (state, action: PayloadAction<CheckListItemType>) => {
+    addItemToShoppingList: (state, action: PayloadAction<ShoppingListItemType>) => {
       state.list = [
         ...state.list,
         action.payload
       ]
       state.totalPrice += action.payload.price
     },
-    deleteItemFromChecklist: (state, action: PayloadAction<string>) => {
+    deleteItemFromShoppingList: (state, action: PayloadAction<string>) => {
       const listItemToDelete = state.list.find(item => item.id === action.payload);
       state.list = state.list.filter(item => item.id !== action.payload);
       state.totalPrice -= listItemToDelete?.price || 0;
@@ -38,6 +38,6 @@ export const checklistSlice = createSlice({
   },
 })
 
-export const { addItemToChecklist, deleteItemFromChecklist, increaseItemQuantity } = checklistSlice.actions
+export const { addItemToShoppingList, deleteItemFromShoppingList, increaseItemQuantity } = checklistSlice.actions
 
 export const checklistReducer = checklistSlice.reducer

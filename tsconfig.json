@@ -19,6 +19,7 @@
       "@translations": ["./src/features/translations"],
       "@navigation": ["./src/features/navigation"],
       "@utils": ["./src/utils"],
+      "@services": ["./src/features/services"]
     },
   },
   "include": ["src" /*, "types", "mirage", "utils", "__tests__", "storybook"*/],
