@@ -13,6 +13,8 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 import java.util.Arrays;
 
+import io.invertase.firebase.storage.ReactNativeFirebaseStoragePackage;
+
 import org.unimodules.adapters.react.ModuleRegistryAdapter;
 import org.unimodules.adapters.react.ReactModuleRegistryProvider;
 public class MainApplication extends Application implements ReactApplication {
@@ -35,6 +37,7 @@ public class MainApplication extends Application implements ReactApplication {
           List<ReactPackage> unimodules = Arrays.<ReactPackage>asList(
             new ModuleRegistryAdapter(mModuleRegistryProvider)
           );
+
           packages.addAll(unimodules);
 
           return packages;
